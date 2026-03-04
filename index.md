@@ -10,7 +10,7 @@
 
 **Office Hours:** Tuesdays 12:30p - 1:30p, email or chat to schedule
 
-**Class Website**: [https://jffng.github.io/huw112]
+**Class Website**: [https://jffng.github.io/huw112](https://jffng.github.io/huw112)
 
 **Class Discord:** [https://discord.gg/AsRg6JMS](https://discord.gg/AsRg6JMS)
 
