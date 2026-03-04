@@ -1,8 +1,8 @@
 # Intro to New Media — Spring 2026 Syllabus
 
 **Course Number:** HUW 112
-**Days/Time:&#32;**Tuesdays and Thursdays, 9:15a - 11:30a
-**Instructor:&#32;**Jeff Ong — Section 5382 
+**Days/Time:** Tuesdays and Thursdays, 9:15a - 11:30a
+**Instructor:** Jeff Ong — Section 5382 
 **Email:** TBD@lagcc.cuny.edu | jffng@proton.me
 **Office Hours:** Tuesdays 12:30p - 1:30p, email or chat to schedule
 **Class Website**: 
