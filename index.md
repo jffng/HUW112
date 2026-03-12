@@ -12,8 +12,6 @@
 
 **Class Website**: [https://jffng.github.io/HUW112](https://jffng.github.io/HUW112)
 
-**Class Discord:** [https://discord.gg/AsRg6JMS](https://discord.gg/AsRg6JMS)
-
 ## **Course Description**
 
 This course introduces students to the field of new media technology. For our purposes, new media are forms of communication and ways of expressing made possible by a computer. We will study and practice various foundational modes of digital media — text, images, graphics, videos, sound, and websites. 
@@ -46,8 +44,6 @@ On completion of this course, you will be able to:
 *Having objectives allows us to evaluate how well we have achieved our goals.*
 
 ### 
-
-[](https://github.com/golanlevin/lectures/blob/master/syllabi/60-120_spring_2024.md#course-relevance)
 
 ***Is this course for me?***
 
@@ -136,11 +132,11 @@ You will take what you have learned and combine it to create a final project.
 
 ## Assignments
 
-Each unit has one assignment, that is due at the beginning of class . You will have time to work on it during class across the full duration of the unit.
+Each unit has one assignment, that is due at the beginning of class. You will have time to work on it during class across the full duration of the unit.
 
 | # | Assignment | Unit | Due |
 | --- | --- | --- | --- |
-| 1 | Hello, World | Unit 1 | March 17 |
+| 1 | Poster | Unit 1 | March 31 |
 | 2 | Portrait | Unit 2 | April 14 |
 | 3 | Short Video ("Reel") | Unit 3 | April 30 |
 | 4 | Webpage | Unit 4 | May 19 |
