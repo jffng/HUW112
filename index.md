@@ -80,7 +80,7 @@ How do computers see? How does looking through them influence how we see ourselv
 
 We will look at the history of digital images, understand the differences between graphic formats, and practice creating and manipulating them.
 
-**Tools:** Adobe Photoshop, p5.js
+**Tools:** Adobe Illustrator and Photoshop, p5.js
 
 ***
 
