@@ -1,18 +1,12 @@
 # Intro to New Media — Spring 2026 Syllabus
 
 **Course Number:** HUW 112
-
-**Days/Time:** Tuesdays and Thursdays, 9:15a - 11:30a
-
-**Instructor:** Jeff Ong — Section 5382 
-
-**Email** jeffrey.ong97@lagcc.cuny.edu
-
+**Days/Time:&#32;**Tuesdays and Thursdays, 9:15a - 11:30a
+**Instructor:&#32;**Jeff Ong — Section 5382 
+**Email:** TBD@lagcc.cuny.edu | jffng@proton.me
 **Office Hours:** Tuesdays 12:30p - 1:30p, email or chat to schedule
-
-**Class Website**: [https://jffng.github.io/HUW112](https://jffng.github.io/HUW112)
-
-**Lecture Notes:** [View notes from every class](lectures/)
+**Class Website**: 
+**Class Discord:** [https://discord.gg/AsRg6JMS](https://discord.gg/AsRg6JMS)
 
 ## **Course Description**
 
@@ -46,6 +40,8 @@ On completion of this course, you will be able to:
 *Having objectives allows us to evaluate how well we have achieved our goals.*
 
 ### 
+
+[](https://github.com/golanlevin/lectures/blob/master/syllabi/60-120_spring_2024.md#course-relevance)
 
 ***Is this course for me?***
 
@@ -82,7 +78,7 @@ How do computers see? How does looking through them influence how we see ourselv
 
 We will look at the history of digital images, understand the differences between graphic formats, and practice creating and manipulating them.
 
-**Tools:** Adobe Illustrator and Photoshop, p5.js
+**Tools:** Adobe Photoshop, p5.js
 
 ***
 
@@ -134,11 +130,11 @@ You will take what you have learned and combine it to create a final project.
 
 ## Assignments
 
-Each unit has one assignment, that is due at the beginning of class. You will have time to work on it during class across the full duration of the unit.
+Each unit has one assignment, that is due at the beginning of class . You will have time to work on it during class across the full duration of the unit.
 
 | # | Assignment | Unit | Due |
 | --- | --- | --- | --- |
-| 1 | Poster | Unit 1 | March 31 |
+| 1 | Hello, World | Unit 1 | March 17 |
 | 2 | Portrait | Unit 2 | April 14 |
 | 3 | Short Video ("Reel") | Unit 3 | April 30 |
 | 4 | Webpage | Unit 4 | May 19 |
