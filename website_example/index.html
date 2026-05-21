@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  index.html  —  CSS LAYOUT DEMO
+  Subject: Spectral Sound (a record label)
+  ============================================================
+  This file is the STRUCTURE of the page (the boxes).
+  The LOOK lives in style.css, linked in the <head> below.
+
+  Neocities rhythm:  edit  ->  Save  ->  reload the live tab.
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectral Sound</title>
+
+  <!-- ===== LOADING A FONT FROM AN OUTSIDE SERVER =====
+       These three lines fetch the "Spectral" font from
+       Google's servers when the page loads. The font isn't
+       on YOUR site — the browser goes and gets it, the same
+       way it goes and gets an image. This is a live example
+       of the request/response idea: your page asks Google
+       for a font file, Google sends it back.
+       (The font is really called "Spectral" — handy.) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- This connects YOUR stylesheet. If styling isn't showing
+       up, check this line and that the filename matches. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER: the top of the page ===== -->
+  <header>
+    <h1>Spectral Sound</h1>
+    <p class="tagline">A record label focusing on minimal, leftfield techno and idm.</p>
+  </header>
+
+  <!-- ===== NAV: a row of links that jump down the page =====
+       This <nav> is a flex container too — see style.css. -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#releases">Releases</a>
+    <a href="#listen">Listen</a>
+  </nav>
+
+  <!-- ===== ABOUT: a section of plain text ===== -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      "Spectral Sound was formed in 2000 as the Ghostly International label (it's sister label) was moving toward more experimental and pop releases. Keeping the label's dance-floor roots growing, Spectral focuses on moody, leftfield techno/house and showcases the music of area artists like Matthew Dear, Osborne, James Cotton and Hieroglyphic Being. Spectral has also worked with some of America's best producers at the remix/reconstruction level, including Germany's Reinhard Voigt (Kompakt) and Pantytec (Perlon), LA's David Alvarado, Virginia's Bryan Zentz and NYC's John Selway. With releases as diverse as acid house workouts to glitched-out dub tracks, the Spectral Sound imprint strives to find the perfect balance between retro and future, art and dance."
+    </p>
+  </section>
+
+  <!-- ===== RELEASES: the record-cover gallery =====
+       THE PATTERN TO NOTICE:
+         - one container div   (.gallery)
+         - several box divs    (.cover) inside it
+         - an <img> lives INSIDE each box
+
+       display:flex (or grid) arranges the BOXES.
+       The images just ride along inside them. This is why
+       an <img> doesn't go straight into a flex container. -->
+  <section id="releases">
+    <h2>Releases</h2>
+
+    <div class="gallery">
+
+      <div class="cover">
+        <!-- <span class="badge">NEW</span> -->
+        <img src="audion - suckfish.jpg" alt="picture of rotating optical illusion">
+        <p>Audion - Suckfish</p>
+      </div>
+
+      <div class="cover">
+        <img src="cover2.png" alt="Record cover two">
+        <p>Artist Two — Title Two</p>
+      </div>
+
+      <div class="cover">
+        <img src="cover3.png" alt="Record cover three">
+        <p>Artist Three — Title Three</p>
+      </div>
+
+      <div class="cover">
+        <img src="cover4.png" alt="Record cover four">
+        <p>Artist Four — Title Four</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LISTEN: a YouTube embed =====
+       An iframe is a whole webpage living inside this one —
+       a little window onto another server.
+       (Swap the video id in the src for a real one.) -->
+  <section id="listen">
+    <h2>Listen</h2>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube player"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Made in HUW 112. Not affiliated with the label.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* ============================================================
+   style.css  —  CSS LAYOUT DEMO
+   ============================================================
+   Organized around the FIVE core properties. Almost any
+   layout is built from these:
+
+     1. display          — how an element behaves + arranges its children
+     2. padding / margin — space INSIDE vs space OUTSIDE a box
+     3. gap              — space BETWEEN items in a flex/grid
+     4. position         — escaping the normal flow (pin, overlay)
+     5. color / background-color — making it yours
+
+   Read top to bottom; it builds the same way we teach it.
+   ============================================================ */
+
+
+/* ---- one defensive line ----------------------------------
+   Makes padding + borders count INSIDE an element's width,
+   so boxes stop unexpectedly getting bigger than you said.
+   Put it at the top of every stylesheet. That's all you
+   need to know about it for now. */
+* {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   #5  COLOR + the page as one big box
+   ============================================================
+   The whole page is a box: <body>. Color is the fastest way
+   to make a page feel like YOURS. Change these three first. */
+body {
+  background-color: #111111;          /* page background */
+  color: #eeeeee;                     /* default text color */
+
+  /* The font we fetched from Google in the <head>.
+     If the font fails to load, the browser falls back
+     to its own serif — that's what "serif" at the end is. */
+  font-family: "Spectral", serif;
+
+  line-height: 1.6;                   /* space between lines of text */
+  margin: 0;                          /* kill the browser's default gap */
+  padding: 24px;                      /* breathing room inside the page */
+}
+
+
+/* ============================================================
+   #2  PADDING vs MARGIN  (the box model)
+   ============================================================
+   padding = space INSIDE the box  (pushes content inward)
+   margin  = space OUTSIDE the box (pushes other boxes away)
+   border  = the line around the box
+   This single distinction prevents most layout confusion. */
+header {
+  background-color: #1d1d1d;
+  padding: 32px;                      /* INSIDE: text sits away from the edge */
+  margin-bottom: 24px;                /* OUTSIDE: gap below the header */
+  border: 1px solid #333333;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;                   /* Spectral bold */
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin: 8px 0 0 0;
+  color: #999999;                     /* dimmer than body text */
+  font-style: italic;                 /* Spectral has a real italic */
+}
+
+
+/* ============================================================
+   #1  DISPLAY  (first appearance: a flex row of links)
+   ============================================================
+   display is the master switch. Here it turns <nav> into a
+   flex container, so its links lay out in a row instead of
+   stacking. #3 gap spaces them. */
+nav {
+  display: flex;                      /* #1 the master switch */
+  gap: 24px;                          /* #3 space BETWEEN links */
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #333333;
+}
+
+nav a {
+  color: #eeeeee;
+  text-decoration: none;              /* remove default underline */
+}
+
+nav a:hover {
+  color: #ff5a36;                     /* accent on hover */
+}
+
+
+/* ---- section headings ------------------------------------ */
+h2 {
+  font-size: 28px;
+  border-left: 4px solid #ff5a36;
+  padding-left: 12px;                 /* #2 padding pushes text off the bar */
+  margin-top: 40px;
+}
+
+
+/* ============================================================
+   #1 DISPLAY + #3 GAP  —  FLEXBOX: boxes along ONE line
+   ============================================================
+   .gallery is the CONTAINER. display:flex lays its children
+   (.cover boxes) out in a row. gap spaces them. flex-wrap
+   lets them drop to the next line when they run out of room.
+
+   Change these live and narrate what moves:
+     justify-content: flex-start | center | space-between
+     align-items:     flex-start | center | stretch          */
+.gallery {
+  display: flex;                      /* #1 turn on flex */
+  gap: 20px;                          /* #3 space BETWEEN covers */
+  flex-wrap: wrap;                    /* wrap to next line if needed */
+  justify-content: flex-start;        /* spacing ALONG the row */
+  align-items: flex-start;            /* alignment ACROSS the row */
+}
+
+/* Each cover is a box. The image lives INSIDE it.
+   position:relative here does nothing visible on its own —
+   it makes this box the anchor for the .badge below (#4). */
+.cover {
+  position: relative;                 /* #4 anchor for the badge */
+  width: 200px;
+  background-color: #1d1d1d;
+  padding: 12px;                      /* #2 inside space */
+  border: 1px solid #333333;
+}
+
+/* #1 again: an <img> is inline by default, which leaves a
+   tiny gap under it and makes it behave like text. Setting
+   display:block takes it out of the text flow so it fills
+   its box cleanly. */
+.cover img {
+  display: block;                     /* #1 override the default */
+  width: 100%;
+}
+
+.cover p {
+  margin: 12px 0 0 0;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+
+/* ============================================================
+   #4  POSITION  —  pinning the NEW badge to a corner
+   ============================================================
+   The .cover above is position:relative, so it acts as the
+   anchor. position:absolute here lifts the badge OUT of the
+   normal flow and pins it to the top-left of its anchor box.
+   This is the same idea behind overlaying clickable links on
+   an image (the image-map / SVG-nav idea for the projects). */
+.badge {
+  position: absolute;                 /* #4 lift out of flow */
+  top: 4px;                           /* distance from anchor's top */
+  left: 4px;                          /* distance from anchor's left */
+  background-color: #ff5a36;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 7px;                   /* #2 small inside space */
+}
+
+
+/* ============================================================
+   GRID  —  the SAME gallery, done as a grid
+   ============================================================
+   Flex arranges along ONE line. Grid is a true 2-D matrix
+   of rows AND columns.
+
+   To SEE grid instead of flex on the gallery: comment out the
+   .gallery rule above and uncomment this one.
+
+   .gallery {
+     display: grid;                       (#1)
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;                           (#3)
+   }
+
+   1fr            = "one fraction of the leftover space"
+   repeat(3, 1fr) = three equal columns
+   ============================================================ */
+
+
+/* ============================================================
+   the YouTube iframe
+   ============================================================
+   An iframe arrives at an awkward fixed size by default.
+   Wrap it in .video and force it to behave. */
+.video {
+  margin-top: 16px;
+}
+
+.video iframe {
+  display: block;                     /* #1 same inline fix as images */
+  width: 100%;
+  height: 360px;
+  border: 1px solid #333333;
+}
+
+
+/* ---- footer ---------------------------------------------- */
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #333333;
+  color: #777777;
+  font-size: 14px;
+}

@@ -15,7 +15,7 @@ Notes from each class meeting. If you missed a class, start here.
 - [Animation Principles](05-12-animation-principles.html) — *May 12*
 - [Feedback and Sound](05-14-feedback-and-sound.html) — *May 14*
 - [Websites](05-19-websites.html) — *May 19*
-- [Poetic Web](05-21-poetic-web.html) — *May 21*
+- [CSS](05-21-css.html) — *May 21*
 - [Final Project Brief](06-02-final-project-brief.html) — *June 2*
 
 [← Back to syllabus](../)
