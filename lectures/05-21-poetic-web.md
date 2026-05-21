@@ -7,36 +7,38 @@ title: "Poetic Web"
 
 *May 21, 2026* · [← All lectures](index.html)
 
-**Animation review + crit** Assignment #3 due. 
+**Assignment #3 due** **Animation review + crit** 
 
-**Neal.fun**
+
+**What is the web, recap**
 
 - ARPANET map: https://neal.fun/internet-artifacts/arpanet-map/
 - Internet Roadtrip: https://neal.fun/internet-roadtrip/
 
-**What is the web, recap**
+**Lecture**
+The internet is huge but the average person only sees a tiny fraction of it.
 
-**Poetic Web** 
-- are.na/chia/poetic-web 
-- sadgrl.online
+There is a huge problem with content discovery on the internet today. Between how backed up the search engines are with ‘SEO Optimized Content’ and social media platforms luring us into algorithmic echo-chambers, how are we supposed to actually stoke our digital wanderlust?
 
+- https://sadgrl.online/guides/surf/
 
 **Assignment #4**
-	**Make a website about something you love.** A band, a video game, a movie, an animal, a person, a place, a food — anything you actually care about. It can also be a home for your work / posters.
-	
-	**It must contain:**
-	- **Text** — write something real about it. 
-	- **An image** — at least one.
-	- **A video** — embedded or linked.
-	- **A navigation** — more than one page, or clear sections you can jump to, with links that work.
-	- **Some CSS styling** — make it yours. At minimum: change the fonts, the colors, and the layout (flexbox or grid). It should not look like a default HTML page.
-	
-	**It must be live** on your Neocities site by 6/2.
+
+**Make a website about something you love.** A band, a video game, a movie, an animal, a person, a place, a food — anything you actually care about. It can also be a home for your work / posters.
+
+**It must contain:**
+- **Text** — write something real about it. 
+- **An image** — at least one.
+- **A video** — embedded or linked.
+- **A navigation** — more than one page, or clear sections you can jump to, with links that work.
+- **Some CSS styling** — make it yours. At minimum: change the fonts, the colors, and the layout (flexbox or grid). It should not look like a default HTML page.
+
+**It must be live** on your Neocities site by 6/2.
 
 **CSS layout demo + studio
 
 - Everything on a page is a box. Some boxes stack vertically by default (block — headings, paragraphs, divs). Some sit inline (text, links, images). CSS layout is mostly about taking control of how boxes sit next to each other. Draw this on the board with rectangles. Don't touch the keyboard yet.
-- 
+
 ```css
 * {
   box-sizing: border-box;
@@ -65,3 +67,5 @@ This makes padding and borders count _inside_ an element's width instead of addi
 
 
 **Exercise**
+
+-
