@@ -7,6 +7,8 @@ title: "Time, After Effects"
 
 *April 30, 2026* · [← All lectures](index.html)
 
+https://github.com/golanlevin/lectures/tree/master/lecture_clock
+
 ![c65334a0-a657-4997-bfe6-364fbf401aef-1_all_961](../assets/lectures/c65334a0-a657-4997-bfe6-364fbf401aef-1-all-961.jpg)
 
 ![484](https://d2w9rnfcy7mm78.cloudfront.net/35712258/original_5a73c6524298a82a787916dca8319b45.jpg?1743619586?bc=0)

@@ -16,6 +16,8 @@ Notes from each class meeting. If you missed a class, start here.
 - [Feedback and Sound](05-14-feedback-and-sound.html) — *May 14*
 - [Websites](05-19-websites.html) — *May 19*
 - [CSS](05-21-css.html) — *May 21*
+- [Layout](05-25-layout.html) — *May 25*
+- [Interactivity](05-28-interactivity.html) — *May 28*
 - [Final Project Brief](06-02-final-project-brief.html) — *June 2*
 
 [← Back to syllabus](../)
