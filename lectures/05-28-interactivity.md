@@ -46,18 +46,24 @@ Reload. Hover. The change now _eases_ instead of snapping. That's a **transition
 The logo in the Spectral Sound demo is an **SVG** — an image made of shapes written as markup, right inside your HTML:
 
 ```html
-<svg viewBox="0 0 100 100" width="80" height="80">
-  <circle cx="50" cy="50" r="48" fill="#1d1d1d"/>
-  <circle cx="50" cy="50" r="18" fill="#ff5a36"/>
-  <circle cx="50" cy="50" r="3"  fill="#111111"/>
-</svg>
+    <svg class="logo" viewBox="0 0 100 100" width="80" height="80" aria-label="Spinning record">
+      <circle cx="50" cy="50" r="48" fill="#1d1d1d" stroke="#333333" stroke-width="1"/>
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+      <!-- a light reflection across the disc — breaks the symmetry so the spin is visible -->
+      <rect x="20" y="48" width="60" height="4" fill="#3a3a3a"/>
+      <circle cx="50" cy="50" r="18" fill="#ff5a36"/>
+      <!-- a small mark on the label, off to one side, so you can see it go around -->
+      <circle cx="50" cy="38" r="2.5" fill="#111111"/>
+      <circle cx="50" cy="50" r="3"  fill="#111111"/>
+    </svg>
 ```
 
 You made SVGs in your assignment #2. Now you can see that it's just instructions: _draw a circle here, a circle there._ 
 
 Because it's just shapes-as-text, you can edit and style it with CSS, and scale it to any size without it getting blurry.
 
-A few shapes to know: `<circle>`, `<rect>` (rectangle), `<line>`, `<polygon>`, and `<text>`. Each takes attributes for position and size, plus `fill` (inside color) and `stroke` (outline color).
+A few shapes to know: `<circle>`, `<rect>` (rectangle), `<line>`, `<polygon>`, and `<text>`, `path` . Each takes attributes for position and size, plus `fill` (inside color) and `stroke` (outline color).
 
 This connects back to **Unit 2**: the icons you made could _be_ SVGs — and because each shape is its own element, you can later make individual shapes clickable. That's the seed of a hand-built, link-driven navigation.
 
