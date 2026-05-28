@@ -7,11 +7,18 @@ title: "Interactivity"
 
 *May 28, 2026* · [← All lectures](index.html)
 
-# Making It Move & Making It Respond: SVG, Animation, and a Little JavaScript
+# SVG, Animation, and a Little JavaScript
 
 _HUW 112 · Unit 4: Web_
 
-Last class your pages learned to lay things out. Today they learn to **move** and **react**. Three new ingredients you can drop into your own site: drawing with SVG, animating with CSS, and a first taste of JavaScript so a page can _do_ something when you click.
+You already wrote your first interaction last class:
+`.learn-more:hover`? 
+
+Move the mouse over it, the background and padding change. 
+
+1. drawing with SVG
+2. CSS animating
+3. javascript
 
 A useful way to hold the three languages of the web apart:
 
@@ -19,17 +26,36 @@ A useful way to hold the three languages of the web apart:
 - **CSS** is the look — _how it appears._
 - **JavaScript** is the behavior — _what happens when someone clicks, types, or waits._
 
+## A small change to what you already have
+
+Add one line to `.learn-more`:
+
+```css
+.learn-more {
+  /* ...everything you had before... */
+  transition: all 0.3s;
+}
+```
+
+Reload. Hover. The change now _eases_ instead of snapping. That's a **transition** — it tells CSS to animate any property change over a duration. Same hover code as before; it just feels deliberate now.
+
+→ MDN: [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+
 ## SVG — drawing with shapes you can type
 
-An **SVG** is an image made of shapes written as markup, right inside your HTML. Instead of a photo made of pixels, it's instructions: _draw a circle here, a line there._ Because it's just shapes-as-text, you can edit it, style it with CSS, and scale it to any size without it getting blurry.
+The logo in the Spectral Sound demo is an **SVG** — an image made of shapes written as markup, right inside your HTML:
 
 ```html
 <svg viewBox="0 0 100 100" width="80" height="80">
-  <circle cx="50" cy="50" r="40" fill="#ff5a36" />
-  <rect x="10" y="10" width="30" height="30" fill="black" />
-  <line x1="0" y1="0" x2="100" y2="100" stroke="white" />
+  <circle cx="50" cy="50" r="48" fill="#1d1d1d"/>
+  <circle cx="50" cy="50" r="18" fill="#ff5a36"/>
+  <circle cx="50" cy="50" r="3"  fill="#111111"/>
 </svg>
 ```
+
+You made SVGs in your assignment #2. Now you can see that it's just instructions: _draw a circle here, a circle there._ 
+
+Because it's just shapes-as-text, you can edit and style it with CSS, and scale it to any size without it getting blurry.
 
 A few shapes to know: `<circle>`, `<rect>` (rectangle), `<line>`, `<polygon>`, and `<text>`. Each takes attributes for position and size, plus `fill` (inside color) and `stroke` (outline color).
 
@@ -37,27 +63,11 @@ This connects back to **Unit 2**: the icons you made could _be_ SVGs — and bec
 
 → MDN: [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) · [Basic shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)
 
-## CSS animation — two ways to make things move
+However often times SVGs are messy when you export them from vector programs like Illustrator and Figma. You can clean them up / optimize them with tools like this: https://svgomg.net/
 
-### 1. Transitions — ease a change instead of snapping
+## CSS animation — beyond hover
 
-A **transition** says: "when this property changes, don't jump — glide." Pair it with `:hover` for the easiest win on the web.
-
-```css
-.cover {
-  transition: background-color 0.3s;   /* glide color changes over 0.3 seconds */
-}
-
-.cover:hover {
-  background-color: #ff5a36;            /* on hover, this change eases in */
-}
-```
-
-→ MDN: [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
-
-### 2. Keyframes — define a movement and run it
-
-A **`@keyframes`** rule defines an animation as a start state and an end state. Then you _run_ it on an element with the `animation` property.
+A **transition** animates a single change. **`@keyframes`** lets you define a sequence of states and run them in a loop.
 
 ```css
 @keyframes spin {
@@ -66,11 +76,13 @@ A **`@keyframes`** rule defines an animation as a start state and an end state. 
 }
 
 .logo:hover {
-  animation: spin 2s linear infinite;   /* spin while hovered: 2s per turn, forever */
+  animation: spin 2s linear infinite;
 }
 ```
 
-**Heads up — a common SVG gotcha:** by default an SVG rotates around the page's corner, not its own center, which looks broken. Fix it by telling the shape to spin around itself:
+Same `:hover` you already know — only now we _run_ an animation instead of changing one property. The record spins continuously while hovered, rests otherwise.
+
+**Heads up — an SVG gotcha:** by default an SVG rotates around the page's corner, not its own center. Fix it by telling the shape to spin around itself:
 
 ```css
 .logo {
@@ -83,10 +95,10 @@ A **`@keyframes`** rule defines an animation as a start state and an end state. 
 
 ## JavaScript — making the page respond
 
-CSS reacts to hovering. **JavaScript** reacts to anything: clicks, typing, time passing. Here's the smallest useful pattern, and it's only three steps.
+CSS reacts to hovering. **JavaScript** reacts to anything: clicks, typing, time passing. Here's the smallest useful pattern, three steps.
 
 ```html
-<button id="lights-button">Lights on</button>
+<button id="lights-button">Dark mode</button>
 ```
 
 ```html
@@ -106,12 +118,12 @@ CSS reacts to hovering. **JavaScript** reacts to anything: clicks, typing, time 
 2. **Listen** — `addEventListener("click", ...)` runs your code every time it's clicked.
 3. **Change** — here we add or remove the class `lights-on` on the page.
 
-The clever part: **JavaScript only flips a switch.** All it does is add or remove one class. The _actual_ visual change lives in CSS:
+The key realization — **JavaScript just flips switch** — adding / removing one CSS classs. The _actual_ visual change lives in CSS:
 
 ```css
 body.lights-on {
-  background-color: #f4f1ea;
-  color: #1a1a1a;
+  background-color: #111111;
+  color: #eeeeee;
 }
 ```
 
@@ -119,7 +131,7 @@ So JS decides _when_, CSS decides _what it looks like._ Keeping that division cl
 
 → MDN: [`getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) · [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) · [`classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) · [Intro to events](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events)
 
-## The bigger idea
+## A bigger idea worth sitting with
 
 A web page is not a frozen document. It's a **running program** in your browser. It can change depending on _when_ you visit, _what_ you click, _where_ you are. The page you load at midnight can look different from the page at noon. That's what people mean when they say the web is _dynamic_ — and it's what separates a website from a printed poster.
 
@@ -132,6 +144,14 @@ Drop **one** of these into your own site:
 - Any element that changes color or appears/disappears on a click.
 
 One small interactive moment makes a site feel alive. You don't need many.
+
+## A note on AI tools
+
+Yon can ask ChatGPT or Claude to "make me a site dedicated to X." 
+
+Don't, for this assignment. The point of typing it yourself isn't to be old-fashioned — it's that what you can _type_, you can _change_. What an AI writes for you, you can't change with any confidence, because you don't know what it did. 
+
+After this class? Use whatever you want. For now: your hands, your code, your site.
 
 ---
 

@@ -121,7 +121,7 @@ Take the demo files and make six changes:
 1. Change the subject to something _you_ love (new heading, new text).
 2. Change three colors: the page background, the text, and an accent.
 3. Change the font.
-4. Add a fifth box to the gallery (copy a box, paste it, change the text). Watch flex absorb it automatically.
+4. Add a fifth box to the gallery (copy a box, paste it, change the text). Watch grid absorb it automatically.
 5. Make the `gap` bigger, then the `padding` inside a box bigger. Feel the difference between _between_ and _inside_.
 6. Swap the gallery from `display: flex` to `display: grid` and back. See the same content laid out two ways.
 
