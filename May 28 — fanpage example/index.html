@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectral Sound</title>
+
+  <!-- ===== LOADING A FONT FROM AN OUTSIDE SERVER =====
+       Fetches the "Spectral" font from Google when the page
+       loads — your page asks Google's server for a font file,
+       the server sends it back. Same idea as fetching an image. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER =====
+       The header is a flex row now: SVG logo on the left,
+       the title text on the right. -->
+  <header>
+  
+    <svg id="vinyl" class="logo" viewBox="0 0 100 100" width="200" height="200" aria-label="Spinning record">
+      <circle cx="50" cy="50" r="48" fill="#1d1d1d" stroke="#333333" stroke-width="1"/>
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+      <!-- a light reflection across the disc — breaks the symmetry so the spin is visible -->
+      <rect x="20" y="48" width="60" height="4" fill="#3a3a3a"/>
+      <circle cx="50" cy="50" r="18" fill="#ff5a36"/>
+      <!-- a small mark on the label, off to one side, so you can see it go around -->
+      <circle cx="50" cy="38" r="2.5" fill="#111111"/>
+      <circle cx="50" cy="50" r="3"  fill="#111111"/>
+    </svg>
+    
+    <button id="start-stop">Start/stop the record</button>
+
+
+    <div class="header-text">
+      <h1>Spectral Sound</h1>
+      <p class="tagline">Fan site.</p>
+    </div>
+  </header>
+
+  <!-- ===== NAV + the JS button =====
+       The button has an id so JavaScript can find it.
+       Clicking it runs the code at the bottom of the page. -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#releases">Releases</a>
+    <a href="#listen">Listen</a>
+  </nav>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+    Spectral Sound was formed in 2000 as the Ghostly International label [sister-label of Spectral Sound] was moving toward more experimental and pop releases. Keeping the label's dance-floor roots growing, Spectral focuses on moody, leftfield techno/house and showcases the music of area artists like Matthew Dear, Osborne, James Cotton and Hieroglyphic Being. Spectral has also worked with some of America's best producers at the remix/reconstruction level, including Germany's Reinhard Voigt (Kompakt) and Pantytec (Perlon), LA's David Alvarado, Virginia's Bryan Zentz and NYC's John Selway. With releases as diverse as acid house workouts to glitched-out dub tracks, the Spectral Sound imprint strives to find the perfect balance between retro and future, art and dance.
+    </p>
+    <a class="learn-more" href="discogs.com/spectralsound">Learn More</a>
+    
+  </section>
+
+  <!-- ===== RELEASES: the flex gallery =====
+       one container (.gallery) + several boxes (.cover),
+       each holding an <img>. display:flex arranges the boxes. -->
+  <section id="releases">
+    <h2>Releases</h2>
+    
+    <div class="gallery">
+    
+      <div class="cover">
+        <!-- <span class="badge">NEW</span> -->
+        <a href="/link">
+        <img src="mouth to mouth.jpg" alt="Record cover one">
+        <p>Audion — Mouth to Mouth (2006)</p>
+        </a>
+      </div>
+
+      <div class="cover">
+        <img src="bodycode - immune.jpg" alt="Record cover two">
+        <p>Bodycode - Immune</p>
+      </div>
+
+      <div class="cover">
+        <img src="kate simko - take you there.jpg" alt="Record cover three">
+        <p>Kate Simko - Take you there</p>
+      </div>
+
+      <div class="cover">
+        <img src="1-osborne-daylight.webp" alt="Record cover four">
+        <p>Osborne - Daylight</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LISTEN: a YouTube embed ===== -->
+  <section id="listen">
+    <h2>Listen</h2>
+    <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/h7qTI6Njp9g?si=beMUbPgX2RCl6J7K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made in HUW 112. Not affiliated with the label.</p>
+  </footer>
+  
+  <script>
+    // Get the button. Grab it!
+    var button = document.getElementById('start-stop');
+    var vinyl = document.getElementById('vinyl');
+    
+    // Do something when it's clicked. Right now, alert.
+    button.addEventListener("click", function(){
+      document.body.classList.toggle('lights');
+      vinyl.classList.toggle('spin');   
+    });
+    
+    // addEventListener( nameoftheevent, whatyouwanttohappen <-- function );
+  </script>
+
+</body>
+</html>

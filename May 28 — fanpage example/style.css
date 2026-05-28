@@ -1,0 +1,109 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+   
+ * {
+    box-sizing: border-box;
+ }
+
+body {
+  background-color: white;
+  color: #111111;
+  font-family: system-ui;
+  margin: 0;
+  padding: 24px;
+}
+
+body p {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  background-color: white;
+  padding: 12px;
+}
+
+.units {
+  font-size: 24px;
+  padding: 24px;
+  background: lightblue;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.learn-more {
+  color: green;
+  padding: 12px;
+  font-weight: bold;
+  border-width: 3px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: lightgrey;
+  transition: all .2s;
+}
+
+/* this is called a pseudo-class */
+.learn-more:hover {
+  background-color: white;
+  border: 3px solid black;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 12px;
+}
+
+.cover img {
+  width: 100%;
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spin {
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1.0); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1.0); }
+}
+
+.lights {
+  background-color: #222;
+}
+
+/*@keyframes grow {*/
+/*  0% { transform: scale(1); }*/
+/*  50% { transform: scale(1.2); }*/
+/*  100% { transform: scale(1); }*/
+/*}*/
+
+/*@keyframes spin {*/
+/*  0% { transform: rotate(0deg); }*/
+/*  100% { transform: rotate(360deg); }*/
+/*}*/
+
+/*.logo:hover {*/
+/*  cursor: pointer;*/
+/*  animation: spin 2s linear infinite;*/
+/*}*/
+
+
+
+
+
