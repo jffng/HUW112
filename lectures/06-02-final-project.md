@@ -9,11 +9,9 @@ title: "Final Project"
 
 _Due June 16_
 
-The final project has two deliverables: a portfolio and a finished Assignment #4 site. Both must be live on Neocities by June 16.
-
 ---
 
-## Deliverable 1 — Assignment #4, Finished
+## Assignment #4
 
 The site built during Unit 4 — about something you love — completed to its full requirements.
 
@@ -25,27 +23,33 @@ The site built during Unit 4 — about something you love — completed to its f
 - A working navigation — more than one page, or clear linked sections
 - CSS styling that makes it distinct — fonts, colors, and a flex or grid layout
 
-**Plus one added element.** Choose one of the following and integrate it into the site:
-
-- A new page, linked from the nav and styled consistently with the rest of the site
-- An SVG element — a logo, an icon, or a decorative shape
-- An interactive element — a button, a hover effect using `transition`, or a CSS animation
-- A second page that approaches the subject from a different angle (a timeline, a list, a personal essay)
-
 ---
 
-## Deliverable 2 — Portfolio
+## Semester Recap
 
-A standalone page housing all six assignments from this semester.
+- Typography/poster → __how do text and images create meaning?__
+- Reading → __what does it mean for an image to feel "real" or "true"?__
+- Icons → __how do you compress an idea into its simplest visual form?__
+- GIFS + Animation → __what does time add to an image that a still can't do? how do you sequence meaning across time?__
+- Web → __what happens when you connect everyone simultaneously?__
 
-**Requirements:**
+## Final Project — Portfolio Project
 
-- All six assignments (poster, portrait, reel, webpage, animation, final) visible on the page or clearly linked
+A webpage housing all four assignments from this semester, plus **one new work** about a topic of your choosing:
+
+- static poster
+- SVG graphic
+- gif
+- animation
+
+**Portfolio Requirements:**
 - Your name
 - A short statement — who you are, what you're interested in, what kind of work you want to make. 100 words minimum.
-- Consistent visual treatment: fonts, colors, and layout applied throughout
+- All **five** works present: poster, icons + gif, animation, link to fan page, and  
+- Some basic styling: fonts, colors, and layout applied throughout
+- BONUS: create a moodboard that visualizes your process, inspiration, and artistic references.
 
-**Where it lives:** A new Neocities site or a dedicated page (`/portfolio.html`) on your existing one. It must be live and shareable by June 16.
+**Where it lives:** A root (`/`) of your Neocities site or a dedicated page (`/portfolio.html`) on your existing one. It must be live and shareable by June 16.
 
 ## Schedule
 
@@ -95,13 +99,13 @@ Adding a background image:
 
 ```css
 /* 1. basic background image */
-.hero {
+.add-some-waves {
   background-image: url("https://images.unsplash.com/photo-1505118380757-91f5f5632de0");
   height: 300px;
 }
 
 /* 2. sized and positioned properly */
-.hero {
+.add-some-waves-properly {
   background-image: url("https://images.unsplash.com/photo-1505118380757-91f5f5632de0");
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,7 +114,7 @@ Adding a background image:
 }
 
 /* 3. shorthand */
-.hero {
+.add-some-waves-same-but-short {
   background: url("https://images.unsplash.com/photo-1505118380757-91f5f5632de0") center / cover no-repeat;
   height: 300px;
 }
