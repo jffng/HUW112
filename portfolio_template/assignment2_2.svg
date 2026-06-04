@@ -1,0 +1,70 @@
+﻿<svg id="Animals" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6, .cls-5 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        fill: #f068a7;
+      }
+
+      .cls-3 {
+        fill: #5e5958;
+      }
+
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        fill: #9bd5c2;
+      }
+
+      .cls-4 {
+        fill: #ffe477;
+      }
+
+      .cls-5 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-8" width="100" height="100" />
+  <circle class="cls-3" cx="25.4" cy="41.04" r="19.69" />
+  <circle class="cls-5" cx="16.77" cy="36.66" r="3.47" />
+  <circle class="cls-5" cx="32.39" cy="36.66" r="3.47" />
+  <circle class="cls-7" cx="15.45" cy="34.63" r=".75" />
+  <circle class="cls-7" cx="17.99" cy="37.8" r="1.59" />
+  <circle class="cls-7" cx="31.25" cy="34.63" r=".75" />
+  <circle class="cls-7" cx="33.79" cy="37.8" r="1.59" />
+  <circle class="cls-4" cx="69.69" cy="41.04" r="19.69" />
+  <circle class="cls-5" cx="61.05" cy="36.66" r="3.47" />
+  <circle class="cls-5" cx="76.67" cy="36.66" r="3.47" />
+  <circle class="cls-7" cx="59.73" cy="34.63" r=".75" />
+  <circle class="cls-7" cx="62.28" cy="37.8" r="1.59" />
+  <circle class="cls-7" cx="75.53" cy="34.63" r=".75" />
+  <circle class="cls-7" cx="78.08" cy="37.8" r="1.59" />
+  <polygon class="cls-3" points="9.98 28.81 11.77 14.28 16.2 23.63 9.98 28.81" />
+  <polygon class="cls-3" points="40.42 28.61 38.63 14.09 34.19 23.44 40.42 28.61" />
+  <polygon class="cls-2" points="11.29 26.39 12.58 20.81 14.11 24.48 11.29 26.39" />
+  <polygon class="cls-2" points="38.71 25.78 37.43 20.2 35.9 23.87 38.71 25.78" />
+  <ellipse class="cls-6" cx="24.15" cy="45.58" rx="3.2" ry="1.31" />
+  <ellipse class="cls-6" cx="68.6" cy="45.58" rx="3.2" ry="1.31" />
+  <path class="cls-1" d="M24.15,45.58v3.16s-3.12,3.26-6.66,4.06" />
+  <path class="cls-1" d="M24.15,48.75s3.77,4.79,6.48,4.65" />
+  <path class="cls-4" d="M58.62,25.41l-4.76,3.49s-.45,6.55,1.56,6.49c2.27-.07,3.2-9.98,3.2-9.98Z" />
+  <path class="cls-4" d="M81.28,26.39l4.76,3.49s.45,6.55-1.56,6.49c-2.27-.07-3.2-9.98-3.2-9.98Z" />
+  <path class="cls-1" d="M68.6,46.9v2.03s-.23,2.01-3.77,2.4" />
+  <path class="cls-1" d="M68.6,48.93s.55,2.43,3.2,2.23" />
+  <ellipse class="cls-2" cx="68.65" cy="51.86" rx=".66" ry="2.04" />
+</svg>

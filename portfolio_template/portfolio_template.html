@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Intro to New Media Portfolio Template</title>
+
+  <!-- ===== LOADING A FONT FROM AN OUTSIDE SERVER =====
+       Fetches the "Spectral" font from Google when the page
+       loads — your page asks Google's server for a font file,
+       the server sends it back. Same idea as fetching an image. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER =====
+       The header is a flex row now: SVG logo on the left,
+       the title text on the right. -->
+  <header>
+
+    <div class="header-text">
+      <h1>Your Name — Intro to New Media (HUW112) Portfolio</h1>
+      <p class="tagline">Here lies all the amazing work I did this semester, Spring 2026.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#poster">Poster</a>
+    <a href="#icons">Icons</a>
+    <a href="#animation">Animation</a>
+    <a href="#website">Website</a>
+    <a href="#final">Final</a>
+  </nav>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am interested in websites, coding, music, software development. When I am older and wiser, I want to farm and touch grass. But for now, I am here because of the strange inventions that people before me made. Maybe someday this will be different, but today, I am writing code. I hope you are well.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== RELEASES: the flex gallery =====
+       one container (.gallery) + several boxes (.cover),
+       each holding an <img>. display:flex arranges the boxes. -->
+  <section id="poster">
+    <h2>Poster</h2>
+    <div class="side-by-side">
+      <img src="assignment1_poster.jpg"/>
+      <p>I made this poster as my first assignment in New Media, we learned about text and digital graphics, using Illustrator. I chose to represent an imagined album cover because I love cats and rock & roll. I used a degraded photo filter on the expanded type and image of the cats, to give a grungy feeling.</p>
+    </div>
+  </section>
+
+  <section id="icons">
+    <h2>Icons</h2>
+    <div class="side-by-side">
+      <div class="icon-container">
+        <img src="assignment2_1.svg"/>
+        <img src="assignment2_2.svg"/>
+        <img src="assignment2_3.svg"/>
+        <img src="assignment2_4.svg"/>
+      </div>
+      <p>I made these icons to represent different aspects of my daily life. I chose coffee because I drink coffee everyday (black coffee, non specifically branded)...
+      </p>
+    </div>
+    <img id="assignment2_gif" src="assignment2.gif"/>
+  </section>
+
+  <!-- ===== LISTEN: a YouTube embed ===== -->
+  <section id="animation">
+    <h2>Animation</h2>
+    <p>This is my animation assignment (#3), the focus of this assignment was on motion, feedback, and revisions. In the second version, I looked more closely at the motion and tried to ...</p>
+    <div class="side-by-side">
+      <div>
+        <h3>V1</h3>
+        <video src="assignment3_v1.mp4" autoplay muted controls width="250"></video>
+      </div>
+      <div>
+        <h3>V2</h3>
+        <video src="assignment3_v2.mp4" autoplay muted controls width="250"></video>
+      </div>
+    </div>
+  </section>
+
+  <section id="website">
+    <h2>Website</h2>
+    <p>This is my website (HTML, CSS, vanilla JS) about one of my favorite record labels, spectral sound. You can visit it <a href="/https://jong-new-media.neocities.org/spectralsound">here</a></p>.
+    <img src="assignment4.png"/>
+  </section>
+
+    <section id="final">
+      <h2>Final Project</h2>
+      <p>This is my final project, it can be a poster, icon graphic, gif, animation, or webpage.</p>
+      <img src=""/>
+    </section>
+
+  <footer>
+    <p>Made in HUW 112.</p>
+  </footer>
+  
+</body>
+</html>
